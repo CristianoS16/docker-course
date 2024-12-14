@@ -1,0 +1,13 @@
+FROM debian
+
+# Metadata 
+LABEL opp="Giropops"
+
+# Enviroment vars
+ENV TEST = "TESTE"
+
+# Execute commands in build time
+RUN apt-get update && apt-get install stress -y && apt-get clean
+
+# Execute commands (only one )
+CMD stress --cpu 1 --vm-bytes 64M --vm 1

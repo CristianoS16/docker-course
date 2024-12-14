@@ -1,0 +1,51 @@
+docker container ls
+docker container run -d nginx
+docker container run -ti ubuntu
+docker container exec -ti f797137112aa bash
+docker container inspect f797137112aa
+docker container attach f797137112aa
+
+docker container stop f797137112aa
+docker container start f797137112aa
+docker container restart f797137112aa
+
+docker container pause f797137112aa
+docker container unpause f797137112aa
+
+docker container logs -f f797137112aa
+
+docker container rm -f f797137112aa
+docker container rm f797137112aa
+
+docker container stats
+docker container top d75
+
+docker image ls  
+
+run -m 128M --> memory limit
+run --cpus 2 --> core amount(float)
+docker container update
+
+
+
+docker container run -ti --mount type=bind,src=/home/cristiano/Documents/docker-course/opt/giropops,dst=/giropops debian
+
+
+docker volume ls
+docker volume create giropops
+docker volume inspect giropops
+
+
+docker volume prune
+docker container prune
+docker image prune
+
+docker image build -t my_apache:3.0.0 . --no-cache
+
+
+docker commit -m "ubuntu with vim and curl" eb5  ---> Transforma uma container em uma image
+
+===============================
+
+stress -cpu 1 --vm-bytes 128M --vm 1
+
